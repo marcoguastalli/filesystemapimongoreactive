@@ -39,12 +39,16 @@ http://localhost:8090/findFileStructureMongoById/Users%2Fmarcoguastalli%2Ftemp
 http://localhost:8090/findFileStructureMongoByPath/Users%2Fmarco27%2Ftemp
 http://localhost:8090/findFileStructureMongoByPath/Users%2Fmarcoguastalli%2Ftemp
 
-##### GET(!) saveFileStructureMongo
+##### POST saveFileStructureMongo
 http://localhost:8090/saveFileStructureMongo/Users%2Fmarco27%2Ftemp
 http://localhost:8090/saveFileStructureMongo/Users%2Fmarcoguastalli%2FDownloads
+curl -X POST --header "Content-Type: application/json" --header "Accept: */*" "http://localhost:8090/saveFileStructureMongo/Users%2Fmarco27%2Ftemp"
 
 ##### DELETE deleteFileStructureMongo
 http://localhost:8090/deleteFileStructureMongo/Users%2Fmarco27%2Ftemp
 http://localhost:8090/deleteFileStructureMongo/Users%2Fmarcoguastalli%2Ftemp
 curl -X DELETE --header "Accept: */*" "http://localhost:8090/deleteFileStructureMongo/Users%2Fmarco27%2Ftemp"
 curl -X DELETE --header "Accept: */*" "http://localhost:8090/deleteFileStructureMongo/Users%2Fmarcoguastalli%2Ftemp"
+
+
+{"path":"/Users/marco27/temp","name":"temp","ext":"","timestamp":"2019-11-17 20:51:40","children":[{"path":"/Users/marco27/temp/.DS_Store","name":".DS_Store","ext":"DS_Store","timestamp":"2019-11-17 11:10:42","children":null,"directory":false},{"path":"/Users/marco27/temp/opt.txt","name":"opt.txt","ext":"txt","timestamp":"2019-11-17 20:51:43","children":null,"directory":false}],"directory":true}
